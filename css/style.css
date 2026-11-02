@@ -130,13 +130,12 @@ select {
   background: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
 }
-
+/* Thuc hanh Flexbox cho header */
 .site-header__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-2);
-  min-height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
 .site-header__brand {
@@ -148,12 +147,9 @@ select {
 }
 
 .site-nav {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
 .site-nav a {
@@ -209,23 +205,24 @@ select {
 
 
 /* ---------- 5. Lưới sản phẩm ---------- */
+/* BƯỚC 6: THỰC HÀNH CSS GRID */
 .product-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-3);
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Màn hình rất nhỏ */
-@media (max-width: 359px) {
-  .product-grid {
-    grid-template-columns: 1fr;
-  }
+/* Hình ảnh sản phẩm */
+.product-card__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
-
-
 /* ---------- 6. Thẻ sản phẩm ---------- */
 .product-card {
   display: flex;
@@ -246,9 +243,9 @@ select {
 }
 
 .product-card__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /* Nội dung sản phẩm */
@@ -382,13 +379,10 @@ select {
   border-radius: 8px;
   cursor: pointer;
   overflow-wrap: anywhere;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.btn:hover,
-.btn:active {
-  background: var(--color-ink-hover);
-}
+
 
 
 /* ---------- 9. Màn hình từ 768px trở lên ---------- */
@@ -409,11 +403,10 @@ select {
     font-size: 2rem;
   }
 
-  .product-grid {
+.product-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--space-6);
-  }
-
+}
   .product-card__body {
     padding: var(--space-4);
   }
@@ -530,5 +523,221 @@ select {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+}
+/* Bước 4.1: Element selector */
+img {
+    max-width: 100%;
+}
+
+h3 {
+    line-height: 1.4;
+}
+/* Bước 4.2: Class selector và Box Model */
+.product-card {
+    margin: 12px;
+    padding: 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.product-card__name {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.price__current {
+    color: #d0011b;
+    font-weight: bold;
+}
+
+.btn {
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+/* Bước 4.3: Descendant selector */
+.product-card .btn {
+    width: 100%;
+    margin-top: auto;
+    text-decoration: none;
+}
+
+.product-card .price__current {
+    color: #d0011b;
+}
+/* THUC HANH BUOC 4 - KIEM TRA CSS SELECTOR */
+.product-card {
+    border: 3px solid #2f6b3a;
+    border-radius: 24px;
+}
+
+.product-card__name {
+    color: #2f6b3a;
+    font-size: 22px;
+}
+
+.product-card .btn {
+    background-color: #d0011b;
+    border-radius: 20px;
+}
+/* Prompt 4: CSS Selector va Box Model */
+
+/* Element selector */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Class selector va Box Model */
+.product-card {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 16px;
+}
+
+/* Dinh dang ten san pham */
+.product-card__name {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Dinh dang gia san pham */
+.price__current {
+    color: #d0011b;
+    font-weight: bold;
+}
+
+/* Descendant selector: nut ben trong the san pham */
+.product-card .btn {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2f6b3a;
+    color: #ffffff;
+    cursor: pointer;
+}
+/* PROMPT 4 - KET QUA THUC HANH */
+.product-card {
+    box-sizing: border-box;
+    border: 3px solid #2f6b3a;
+    border-radius: 24px;
+    padding: 20px;
+}
+
+.product-card .product-card__name {
+    color: #2f6b3a;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.product-card .price__current {
+    color: #d0011b;
+    font-weight: 800;
+}
+
+.product-card .btn {
+    background-color: #d0011b;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 12px;
+}
+/* PROMPT 5 - THUC HANH FLEXBOX */
+.site-header__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+.site-nav {
+    list-style: none;
+}
+
+.site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* Hiển thị viền khi chọn nút bằng bàn phím */
+.btn:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+/* ===== Hiệu ứng nút "Thêm vào giỏ" ===== */
+.product-card .btn {
+  transition: background-color 0.2s ease,
+              box-shadow 0.2s ease,
+              transform 0.2s ease;
+}
+
+/* Hover: chỉ áp dụng trên thiết bị có chuột */
+@media (hover: hover) {
+  .product-card .btn:hover {
+    background-color: #a80016;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(168, 0, 22, 0.25);
+  }
+}
+/* ===== Hiệu ứng nút "Thêm vào giỏ" ===== */
+.product-card .btn {
+  transition: background-color 0.2s ease,
+              box-shadow 0.2s ease,
+              transform 0.2s ease;
+}
+
+/* Hover: chỉ áp dụng trên thiết bị có chuột */
+@media (hover: hover) {
+  .product-card .btn:hover {
+    background-color: #a80016;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(168, 0, 22, 0.25);
+  }
+}
+
+/* Focus bằng bàn phím */
+.product-card .btn:focus-visible {
+  outline: 3px solid #1d4ed8;
+  outline-offset: 3px;
+}
+
+/* Trạng thái đang nhấn */
+.product-card .btn:active {
+  background-color: #8c0013;
+  transform: translateY(0);
+  box-shadow: none;
+}@media (max-width: 359px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .product-card {
+    padding: 0;
+    border-width: 1px;
+    border-radius: var(--radius);
+  }
+
+  .product-card .product-card__name {
+    font-size: 0.875rem;
+    margin-bottom: 4px;
+  }
+
+  .product-card .btn {
+    padding: 8px 6px;
+    border-radius: 8px;
   }
 }
