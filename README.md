@@ -47,3 +47,94 @@ Mở file `index.html` bằng trình duyệt (Chrome, Edge hoặc Firefox). Cầ
 ## 7. Hỗ trợ từ AI
 
 AI (Claude) hỗ trợ phân tích website, đề xuất bố cục khối giá, viết mã HTML/CSS ban đầu và gợi ý cách chỉnh sửa. Tôi tự khảo sát website Cocoon, đối chiếu kết quả AI với website thực tế, tự quan sát giao diện, phát hiện vấn đề khối giá quá chiếm diện tích, quyết định hướng điều chỉnh, kiểm tra kết quả trên trình duyệt và đổi tên thương hiệu. Chi tiết xem trong file [AI_USAGE.md](AI_USAGE.md).
+# BÀI TẬP CÁ NHÂN BUỔI 2 – HTML & CSS
+
+## 1. Thông tin sinh viên
+
+- **Họ và tên:** Hà Quỳnh Như
+- **MSSV:** 31241026992
+- **Môn học:** Phát triển ứng dụng WEB/TMĐT
+- **Giảng viên:** TS. Nguyễn Mạnh Tuấn
+
+## 2. Giới thiệu bài tập
+
+Bài tập cá nhân Buổi 2 tiếp tục phát triển website từ sản phẩm đã thực hiện ở Buổi 1. Website được xây dựng dựa trên giao diện tham khảo của thương hiệu Cocoon.
+
+Trong bài tập này, em tập trung rà soát cấu trúc HTML5, thực hành CSS Selector, Box Model, Flexbox và CSS Grid; đồng thời cải thiện giao diện sản phẩm, bổ sung hiệu ứng tương tác và kiểm tra khả năng hiển thị trên các kích thước màn hình khác nhau.
+
+## 3. Website tham khảo và khu vực cải tiến
+
+- **Website tham khảo:** Cocoon Việt Nam
+- **Đường dẫn:** https://cocoonvietnam.com/
+- **Khu vực cải tiến:** Header, menu điều hướng và danh sách sản phẩm nổi bật.
+
+Các nội dung được cải tiến:
+- Điều chỉnh kích thước hình ảnh và khoảng cách trong thẻ sản phẩm.
+- Sắp xếp logo và menu bằng Flexbox.
+- Bố trí danh sách sản phẩm bằng CSS Grid.
+- Điều chỉnh màu sắc, đường viền và khoảng cách bằng CSS Selector và Box Model.
+- Bổ sung hiệu ứng hover, transition và focus-visible.
+- Điều chỉnh bố cục sản phẩm bằng Media Query để phù hợp với màn hình nhỏ.
+
+## 4. Công nghệ và kỹ thuật đã thực hành
+
+### HTML5
+- Sử dụng các phần tử ngữ nghĩa: header, nav, main, section, article và footer.
+- Tổ chức danh sách sản phẩm bằng ul và li.
+- Sử dụng các thẻ h1, h2, h3 để xây dựng thứ bậc tiêu đề.
+- Bổ sung thuộc tính alt cho hình ảnh.
+- Sử dụng button, data, del và ins trong khu vực sản phẩm.
+
+### CSS3
+- Element Selector, Class Selector và Descendant Selector.
+- Box Model: margin, padding, border, border-radius và box-sizing.
+- Flexbox: display, flex-direction, justify-content, align-items và gap.
+- CSS Grid: display, grid-template-columns và gap.
+- Pseudo-class: hover và focus-visible.
+- Transition và transform.
+- Media Query để điều chỉnh giao diện theo kích thước màn hình.
+
+## 5. Những thay đổi đã thực hiện
+
+| Khu vực | Nội dung cải tiến |
+|---|---|
+| Cấu trúc HTML | Rà soát và sử dụng các phần tử HTML5 ngữ nghĩa |
+| Thẻ sản phẩm | Điều chỉnh khoảng cách, đường viền và hình ảnh |
+| Header | Căn chỉnh logo và menu bằng Flexbox |
+| Danh sách sản phẩm | Sử dụng CSS Grid để bố trí sản phẩm |
+| Nút thao tác | Bổ sung hover, transition và focus-visible |
+| Giao diện responsive | Điều chỉnh số cột bằng Media Query |
+
+## 6. Hướng dẫn chạy website
+
+1. Tải repository về máy bằng chức năng Code → Download ZIP hoặc sử dụng Git Clone.
+2. Giải nén thư mục dự án nếu tải bằng ZIP.
+3. Mở Visual Studio Code.
+4. Chọn File → Open Folder và mở thư mục dự án.
+5. Mở tệp index.html bằng Live Preview hoặc Live Server.
+6. Kiểm tra giao diện website trên trình duyệt.
+
+## 7. Công cụ AI đã sử dụng
+
+- **Công cụ:** ChatGPT.
+- **Mục đích:** Hỗ trợ phân tích cấu trúc HTML, giải thích CSS Selector, Box Model, Flexbox, CSS Grid và đề xuất cách kiểm tra, cải thiện giao diện.
+- **Cách kiểm tra:** Các đề xuất được đối chiếu với mã nguồn hiện có, điều chỉnh trong Visual Studio Code và kiểm tra trực tiếp trên trình duyệt bằng Chrome DevTools.
+
+Chi tiết các prompt và quá trình sử dụng AI được trình bày trong tệp AI_USAGE.md.
+
+## 8. Kiểm thử
+
+Website được kiểm tra trên trình duyệt ở các kích thước màn hình 1366px, 768px và 390px.
+
+Các nội dung kiểm tra gồm:
+- Khả năng mở trang HTML và áp dụng CSS.
+- Hiển thị hình ảnh sản phẩm.
+- Bố cục danh sách sản phẩm.
+- Các liên kết và nút thao tác.
+- Hiệu ứng hover và focus-visible.
+- Khả năng hiển thị trên màn hình nhỏ.
+
+## 9. Repository và website
+
+- **GitHub Repository:** https://github.com/qnhu2810/ecommerce-ui-improvement
+- **Website triển khai:** file:///C:/Users/Quynh%20Nhu/Downloads/ecommerce-ui-improvement/ecommerce-ui-improvement/index.html 
